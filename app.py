@@ -82,7 +82,7 @@ st.markdown(custom_style, unsafe_allow_html=True)
 st.title('🧑‍⚕ Diabetes Prediction using ML')
 
 # Load trained model safely
-diabetes_model_path = r"C:\Users\User\Downloads\AIML 2\diabetes_model.sav"
+diabetes_model_path = r"diabetes_model.sav"
 
 try:
     with open(diabetes_model_path, 'rb') as model_file:
@@ -140,7 +140,7 @@ if st.button('Diabetes Test Result'):
 # Model Accuracy Button (Blue)
 if st.button('Show Model Accuracy'):
     try:
-        test_data = pd.read_csv(r"C:\Users\User\Downloads\AIML 2\diabetes.csv")
+        test_data = pd.read_csv(r"diabetes.csv")
 
         # Ensure 'Outcome' column exists
         if "Outcome" not in test_data.columns:
