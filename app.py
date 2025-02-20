@@ -7,30 +7,6 @@ import base64
 # Set page title and layout
 st.set_page_config(page_title="Diabetes Prediction", layout="wide", page_icon="🧑‍⚕")
 
-# Function to Set Background Image
-def set_background(image_path):
-    """Sets a background image for the Streamlit app."""
-    page_bg_img = f"""
-    <style>
-    .stApp {{
-        background: url("data:image/jpg;base64,{image_path}");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }}
-    </style>
-    """
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# Load Background Image
-def load_image(image_path):
-    with open(image_path, "rb") as image_file:
-        encoded = base64.b64encode(image_file.read()).decode()
-    return encoded
-
-# Apply Background Image
-background_path = r"C:\Users\User\Downloads\mach.jpg"  
-set_background(load_image(background_path))
 
 # Apply Custom Styling for Buttons and Sidebar
 custom_style = """
